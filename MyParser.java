@@ -16,7 +16,7 @@ public class MyParser {
             return new java.sql.Date(formatter.parse(toParse.toString()).getTime());
         } else if (parser.equals(java.sql.Timestamp.class)) {
             SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-            return new java.sql.Timestamp(formatter.parse(toParse.toString()).getTime());
+            return new java.sql.Timestamp(formatter.parse(toParse.toString().replace("T", " ")).getTime());
         } else if(parser.equals(String.class)){
             return toParse.toString();
         }
