@@ -15,13 +15,12 @@ public class Main {
     public static void main(String[] args) {
         try {
             Personne pres=new Personne();
-            Vector<Personne> all=pres.select(null);
-            for (Personne personne : all) {
-                System.out.println(personne.getName());
-            }
+            pres.setId(5);
+            pres.setName("Iza oa");
+            Personne vavao=(Personne)pres.update(null);
+            System.out.println(vavao.getName());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
 }
