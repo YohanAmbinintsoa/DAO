@@ -8,16 +8,16 @@ import TableMapping.*;
 @TableInfo(user = "postgres",pass = "root",database = "test")
 public class Personne extends DAO{
     @Column(name = "id",isPrimary = true)
-    String id;
+    Integer id;
     @Column(name = "nom")
     String name;
     @Column(name = "birth")
     Date birth;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public String getName() {
